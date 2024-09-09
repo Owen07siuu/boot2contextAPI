@@ -3,7 +3,8 @@ import React from 'react'
 export const Articles = () => {
   return (
     <div>
-      <h2>Articulos</h2>
+      <h1>Articulos</h1>
+      <p>Esta es la pagina de articulos</p>
     </div>
   )
 }
