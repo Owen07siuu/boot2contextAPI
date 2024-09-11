@@ -1,10 +1,34 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { Context } from '../context/Context';
 
 export const Login = () => {
+
+  //Extraer user y setuser del contexto usando usecontext
+  const { user, setUser } = useContext(Context);
+  // Metodo que se ejecuta al hacer clic en enviar el formulario
+  const saveData = e => {
+    e.preventDefault();
+
+    //crear el objeto del usuario a partir de los datos del formulario
+    let identified_user = {
+      username: e.target.username.value,
+      name: e.target.name.value,
+      phone: e.target.phone.value
+    }
+
+    console.log(identified_user);
+    //actualizamos el estado del usuario
+    setUser(identified_user);
+  };
   return (
     <div>
-      <h1>Login</h1>
-      <p>Esta es la pagina de login</p>
+      <h1 className='text-center'>Login</h1>
+      <form className='login' onSubmit={saveData}>
+        <input type="text" name='username' placeholder='username'/>
+        <input type="text" name='name' placeholder='name'/>
+        <input type="text" name='phone' placeholder='phone'/>
+        <input type="submit" value="enviar" />
+      </form>
     </div>
   )
 }
