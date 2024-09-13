@@ -152,3 +152,10 @@ body {
   height: 80px;
   margin-right: 10px;
 }
+
+.wine-image {
+  width: 100%;
+  height: 250px;
+  object-fit: contain;
+  padding: 5px;
+}
