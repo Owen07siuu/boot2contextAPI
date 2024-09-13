@@ -7,6 +7,7 @@ import { Contact } from "../components/Contact";
 import { About } from "../components/About";
 import { Login } from "../components/Login";
 import { Errorpage } from '../components/Errorpage';
+import { DarkMode } from '../components/DarkMode';
 import logo from  '../assets/logo.png';
 export const AppRouter = () => {
 
@@ -50,6 +51,9 @@ export const AppRouter = () => {
                     <NavLink to='/login'>Identificte</NavLink>
                 </li>
                 )}
+                <li>
+                    <DarkMode />
+                </li>
             </ul>
             </nav>
         </header>
